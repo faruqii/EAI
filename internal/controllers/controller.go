@@ -59,7 +59,7 @@ func SearchDestination(location string, checkIn string, checkOut string, adults 
 		fmt.Printf("Address: %s\n", result.Address)
 		fmt.Printf("City: %s\n", result.City)
 		fmt.Printf("Neighborhood: %s\n", result.Neighborhood)
-		fmt.Printf("Number of Bathrooms: %f\n", result.Bathrooms)
+		fmt.Printf("Number of Bathrooms: %d\n", result.Bathrooms)
 		fmt.Printf("Number of Beds: %d\n", result.Beds)
 		fmt.Printf("Number of Reviews: %d\n", result.ReviewsCount)
 		fmt.Printf("Rating: %.1f/5\n", result.Rating)
