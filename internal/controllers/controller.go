@@ -77,3 +77,4 @@ func SearchDestination(location string, checkIn string, checkOut string, adults 
 		fmt.Println("=======================================")
 	}
 }
+

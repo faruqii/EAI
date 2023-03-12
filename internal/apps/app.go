@@ -2,11 +2,17 @@ package apps
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/faruqii/EAI/internal/controllers"
 )
 
 func Start() {
+	fmt.Println("Welcome to EAI Travel App")
+	Menus()
+}
+
+func SearchDestination() {
 	// Prompt the user to enter the search parameters
 	var location, checkIn, checkOut, currency string
 	var adult, children, infants int
@@ -50,4 +56,21 @@ func Start() {
 
 	// Call the SearchDestination function with the user input
 	controllers.SearchDestination(location, checkIn, checkOut, adult, children, infants, currency)
+}
+
+func Menus() {
+	var menu int
+	fmt.Println("1. Search Destination")
+	fmt.Println("0. Exit")
+	fmt.Print("Choose menu: ")
+	fmt.Scanln(&menu)
+
+	switch menu {
+	case 1:
+		SearchDestination()
+	case 0:
+		os.Exit(0)
+	default:
+		fmt.Println("Invalid menu")
+	}
 }
